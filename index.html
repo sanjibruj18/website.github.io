@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job search india | JobGenie</title>
+    <link rel="icon" href="attachment_117444264.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+            z-index: 10000;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 15px;
+            height: 15px;
+            background: #888;
+            color: #eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        footer div p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+        <div style="width: 100%; height: 15vh; display: flex;">
+            <div style="width: 12%; display: flex; justify-content: center; align-items: center; margin-left: 60px;">
+                <img src="attachment_117444264.png" alt="logo" width="60%" height="80%">
+            </div>
+            <div
+                style="background-color: white; width: 40%;margin-left: 100px; margin-right: 100px; display: flex; justify-content: space-around; align-items: center;">
+                <a href="index.html" style="color: black; text-decoration: none;"
+                    onmouseover="this.style.color='rgb(29 161 242)'" onmouseout="this.style.color='black'"><b>Home</b></a>
+                <a href="about.html" style="color: black; text-decoration: none;"
+                    onmouseover="this.style.color='rgb(29 161 242)'" onmouseout="this.style.color='black'"><b>About</b></a>
+                <a href="services.html" style="color: black; text-decoration: none;"
+                    onmouseover="this.style.color='rgb(29 161 242)'"
+                    onmouseout="this.style.color='black'"><b>Service</b></a>
+                <a href="contact.html" style="color: black; text-decoration: none;"
+                    onmouseover="this.style.color='rgb(29 161 242)'"
+                    onmouseout="this.style.color='black'"><b>Contact Us</b></a>
+            </div>
+            <div style="width: 28%;  background-color: rgb(255, 255, 255); display: flex; align-items: center;">
+                <a href="https://www.facebook.com/profile.php?id=100081664317609"
+                    style="color: rgb(66,103 ,178); text-decoration: none; margin-right: 30px;margin-left: 30px;  font-size: 2em"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com"
+                    style="color: rgb(29 161 242); text-decoration: none; margin-right: 30px;font-size: 2em"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/sanjib_ruj07?igsh=azN0enQyZmxuMjlu"
+                    style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);-webkit-background-clip: text;color: transparent;font-size: 2em;font-weight: bold;letter-spacing: 2px;font-family: 'Arial', sans-serif; "><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com"
+                    style="color: rgb(205, 32, 31) ; text-decoration: none; margin-left: 30px; font-size: 2em "><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/sanjib-ruj-2673b4234/"
+                    style="color:  #0077b5 ; text-decoration: none; margin-left: 30px; font-size: 2em "><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    
+
+    
+    <div style="width: 100%; height: 85vh; display: flex;">
+        <img src="young-modern-people-smart-casual-wear-discussing-business-while-standing-creative-office_484651-16293.avif"
+            alt="Banner" style="width: 100%; opacity: 0.8; ">
+        <h1
+            style="font-style: Garamond; position: absolute; top: 45%; left: 19%; transform: translate(-50%, -50%); color: rgb(0, 0, 0); text-align: center;">
+            Welcome To JobGenie</h1>
+        <div
+            style="font-size: large; font-style: Times; position: absolute; top: 55%; left: 19%; transform: translate(-50%, -50%); color: rgb(0, 0, 0); text-align: center;">
+            5 lakh+ jobs for you to explore</div>
+        <button
+            style="position: absolute;border-radius: 20px; top: 63%; left: 13%; transform: translate(-50%, -50%); background-color: #d44f11; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;"
+            onmouseover="this.style.backgroundColor='#77300f'" onmouseout="this.style.backgroundColor='#d44f11'"
+            onclick="openPopup()">Log In</button>
+        <button
+            style="position: absolute; border-radius: 20px; top: 63%; left: 25%; transform: translate(-50%, -50%); background-color: #0e91b9; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;"
+            onmouseover="this.style.backgroundColor='#0b4b5f'" onmouseout="this.style.backgroundColor='#0e91b9'"
+            onclick="openSignupPopup()">Sign Up</button>
+        <div class="overlay" id="overlay">
+            <div  class="popup">
+                <span class="close-btn" onclick="closePopup()">×</span>
+                <h2 style="text-align: center; color: #222; margin: 10px 0px 20px;font-size: 25px;">Login</h2>
+                <form>
+                    <div style="margin: 15px 0px;">
+                        <label style="font-size: 14px; color: #222;" for="username">Username:</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 10px; outline: none;border: 1px solid #aaa; border-radius: 5px;" type="text" id="username" placeholder="Enter email or username" name="username">
+                    </div>
+                    <div style="margin: 15px 0px;">
+                        <label style="font-size: 14px; color: #222;"  for="password">Password:</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 10px; outline: none;border: 1px solid #aaa; border-radius: 5px;" type="password" id="password" placeholder="Enter your password" name="password">
+                    </div>
+                    <div style="margin: 15px 0px;">
+                        <input style="margin-right: 5px;" type="checkbox" id="remember-me">
+                        <label style="font-size: 14px; color: #222;"  for="remember-me">Remember me</label>
+                    </div>
+                    <div style="margin: 15px 0px;">
+                        <button type="submit" style="width: 100%; height: 40px; border: none; outline: none; font-size: 16px; background: #222;color: #f5f5f5;border-radius: 10px; cursor: pointer;">Login</button>
+                    </div>
+                    <div style="margin: 15px 0px;">
+                        <a style="display: block; text-align: right; font-size: 15px; color: #1a79ca; text-decoration: none;font-weight: 600;" href="#">Forgot password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay" id="signup-overlay">
+            <div class="popup">
+                <span class="close-btn" onclick="closeSignupPopup()">×</span>
+                <h2 style="text-align: center; color: #222; margin: 0px 0px 10px;font-size: 25px;">Create your JobGenie profile</h2>
+                <h5 style="text-align: center; color: #222; margin: 0px 0px 10px;">Search & apply to jobs from India's No.1 Job Site</h5>
+                <form>
+                    <div style="margin: 10px 0px;">
+                        <label style="font-size: 14px; color: #222;" for="full name">Full name*</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 5px; outline: none;border: 1px solid #aaa; border-radius: 5px;"placeholder="Enter your full name" type="text" id="username" name="username">
+                    </div>
+                    <div style="margin: 10px 0px;">
+                        <label style="font-size: 14px; color: #222;" for="email">Email*</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 5px; outline: none;border: 1px solid #aaa; border-radius: 5px;" placeholder="Enter your e-mail" type="email" id="email" name="email"><p>We'll send relevant jobs and updates to this email</p>
+                    </div>
+                    <div style="margin: 10px 0px;">
+                        <label style="font-size: 14px; color: #222;" for="password">Password*</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 5px; outline: none;border: 1px solid #aaa; border-radius: 5px;" placeholder="Enter your new password" type="password" id="password" name="password"><p>This helps your account stay protected</p>
+                    </div>
+                    <div style="margin: 10px 0px;">
+                        <label style="font-size: 14px; color: #222;" for="number">Mobile number*</label>
+                        <input style="margin-top: 5px; display: block; width: 100%;padding: 5px; outline: none;border: 1px solid #aaa; border-radius: 5px;" placeholder="Enter your mobile number" type="number" id="number" name="number"><p>Recruiters will contact you on this number</p>
+                    </div>
+                    <div style="margin: 10px 0px;">
+                        <p>Work status*</p>
+                        <input type="radio" id="experienced" name="work" value="I'm experienced">
+                        <label style="font-size: 14px; color: #222;" for="experienced"><b>I'm experienced</b></label>
+                        <input type="radio" id="fresher" name="work" value="I'm a freshers">
+                        <label style="font-size: 14px; color: #222;" for="fresher"><b>I'm a fresher</b></label>
+                    </div>
+                    <div style="margin: 10px 0px;">
+                        <input style="margin-right: 5px;" type="checkbox" id="send-me">
+                        <label style="font-size: 15px; color: #222;"  for="send-me">Send me important updates & promotions via SMS, email, and WhatsApp</label>
+                    </div>
+                    <div style="margin: 15px 0px;">
+                        <button style="width: 100%; height: 30px; border: none; outline: none; font-size: 16px; background: #222;color: #f5f5f5;border-radius: 10px; cursor: pointer;" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div style="position: absolute; top: 60%; left: 70%; transform: translate(-50%, -50%);background-color: rgb(159, 162, 194); text-align: center; width: 40%; height: 45%; ">
+            <div>
+                <h1>Find your job here</h1>
+                <input type="text"
+                    style="padding: 10px; border-radius: 20px;border: 2px solid #1900ff;outline: none;margin-right: 10px;"
+                    placeholder="Job title">
+                <input type="text"
+                    style="padding: 10px; border-radius: 20px; border: 2px solid #1900ff; outline: none; margin-right: 10px;"
+                    placeholder="Location">
+                <div
+                    style=" height: 10vh; display: flex; align-items: center; margin-left: 69px;">
+                    <select style="width: 395px; height: 40px; background-color: #ffffff;
+                        color: rgb(0, 0, 0);
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 20px;
+                        cursor: pointer; font-size:medium; font-family: Copperplate; border: 2px solid #1900ff;"
+                        id="experience" name="experience">
+                        <option value="">---Select your experience---</option>
+                        <option value="Freshers">Freshers</option>
+                        <option value="1 year">1 year</option>
+                        <option value="2 year">2 year</option>
+                        <option value="3 year">3 year</option>
+                        <option value="4 year">4 year</option>
+                        <option value="5 year">5 year</option>
+                    </select>
+                </div>
+                <div
+                    style=" height: 10vh; display: flex; align-items: center;margin-left: 69px;">
+                    <form action="/submit" method="post">
+                        <input
+                            style="width: 395px; height: 40px; background-color: #1ea1c9;
+                            color: rgb(255, 255, 255);
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 20px;
+                            cursor: pointer; font-size: large; font-family: Copperplate;"
+                            onmouseover="this.style.backgroundColor='#d44f11'"
+                            onmouseout="this.style.backgroundColor='#0f6dac'" type="submit" value="Find a job">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Existing Footer Content -->
+    <footer>
+        <div>
+            <p>&copy; 2024 JobGenie. All rights reserved.</p>
+        </div>
+        
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div>
+            <p>Contact us: <a href="mailto:sanjibruj8641@gmail.com">sanjibruj8641@gmail.com</a></p>
+            <p>Follow us on social media:
+                <a href="https://www.facebook.com/profile.php?id=100081664317609" target="_blank">Facebook</a>,
+                <a href="https://twitter.com/jobgenie" target="_blank">Twitter</a>,
+                <a href="https://www.instagram.com/sanjib_ruj07?igsh=azN0enQyZmxuMjlu" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        function openPopup() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function openSignupPopup() {
+            document.getElementById("signup-overlay").style.display = "block";
+        }
+
+        function closeSignupPopup() {
+            document.getElementById("signup-overlay").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
